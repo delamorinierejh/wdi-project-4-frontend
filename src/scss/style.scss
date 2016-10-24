@@ -5,9 +5,109 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+a.navbar-brand:hover{
+  opacity: 0.8;
+}
+
 h1, h2, h3, h4 {
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+div.auctionshow {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+div.auctionsindex{
+  h1 {
+    text-align: center;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin: 10px 20px;
+      img {
+        margin-bottom: 20px;
+      }
+      &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.8);
+      }
+      h1 {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      h3 {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+form.loginregister {
+  margin-top: 80px;
+}
+
+div.herotext{
+  text-align: center;
+  display: block;
+  min-height: 160px;
+  background-color: #dae8de;
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #225560;
+    display: inline;
+    line-height: 160px;
+  }
+  img {
+    margin-bottom: 20px;
+    height: 100px;
+  }
+}
+
+div.homepage {
+  margin: 0 -100px;
+}
+
+div.stepsbanner{
+  min-height: 200px;
+  background-color: #225560;
+  ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    li {
+      margin: 20px 50px;
+      display: inline-block;
+      color: white;
+      font-weight: 400;
+      font-size: 20px;
+      max-width: 240px;
+      img {
+        height: 80px;
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+main {
+  min-height: 550px;
 }
 
 img#charity-image {
@@ -15,28 +115,24 @@ img#charity-image {
 }
 
 div.homepage {
-  min-height: 565px;
-  background: pink;
+  h1  {
+    text-align: center;
+    margin-top: 200px;
+  }
 }
 
 ul.homeforms {
+  margin-top: 100px;
   padding: 0;
   list-style-type: none;
   text-align: center;
   li {
+    vertical-align: top;
     display: inline-block;
     width: 40%;
     margin: 0 40px;
   }
-  .registerform {
-    margin-top: 100px;
-  }
-  .loginform {
-    margin-bottom: 100px;
-  }
 }
-
-
 
 header {
   nav {
@@ -103,6 +199,36 @@ header {
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
+  div.herotext{
+    h1 {
+      font-size: 50px;
+      line-height: 80px;
+    }
+    img {
+      margin-bottom: 20px;
+      height: 90px;
+    }
+  }
+  div.auctionsindex{
+    ul {
+      text-align: center;
+      li {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        img {
+          width: 100%;
+        }
+        h1 {
+          font-size: 24px;
+          text-transform: uppercase;
+        }
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
   .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -115,14 +241,15 @@ and (max-device-width : 667px) {
     }
   }
   ul.homeforms {
+    margin-top: 15px;
     li {
+      margin: 20px;
+      margin-top: 50px;
       display: block;
-      width: 100%;
-      text-align: center;
-      margin: 0;
-      height: 200px;
+      width: 90%;
     }
   }
+
   .navbar .navbar-collapse {
     text-align: center;
   }
@@ -140,10 +267,6 @@ and (max-device-width : 667px) {
   }
 }
 
-main {
-  background: pink;
-
-}
 
 footer {
   text-align: center;

@@ -1,17 +1,18 @@
-<h2>Show page</h2>
-<div ng-hide="auctions.auction.length" ng-cloak>
-  <img ng-src="{{ auctions.auction.auction_img }}">
-  <ul>
-    <li><h1 ng-cloak>{{ auctions.auction.title }}</h1></li>
-    <li><p ng-cloak>{{auctions.auction.description}}</p></li>
-    <li><p ng-cloak>Charity: {{auctions.charity.charityDisplayName}}</p></li>
-    <li><p ng-cloak>{{auctions.charity.description}}</p></li>
-    <li><img id="charity-image" ng-src="{{auctions.charity.logoUrl}}" alt="" /></li>
+<div class="auctionshow">
+  <h1 ng-cloak>{{ auctions.auction.title }}</h1>
+  <div ng-hide="auctions.auction.length" ng-cloak>
+    <img ng-src="{{ auctions.auction.auction_img }}">
+    <ul>
+      <li><p ng-cloak>{{auctions.auction.description}}</p></li>
+      <li><p ng-cloak>Charity: {{auctions.charity.charityDisplayName}}</p></li>
+      <li><p ng-cloak>{{auctions.charity.description}}</p></li>
+      <li><img id="charity-image" ng-src="{{auctions.charity.logoUrl}}" alt="" /></li>
+    </ul>
+  </div>
+  <ul ng-cloak ng-hide="auctions.auction.length" class="list-inline nav-buttons">
+
+    <li ng-show="(main.user.id == auctions.auction.user.id)"><a ng-cloak class="btn btn-default"  ui-sref="auctionsEdit({id: auctions.auction.id})">Edit</a></li>
+    <li><a ng-cloak class="btn btn-default" href="javascript:history.back()">Back</a></li>
+    <li ng-show="(main.user.id == auctions.auction.user.id)" id="delete-button" ><a ng-cloak class="btn btn-danger"  ng-click="auctions.delete()">Delete</a></li>
   </ul>
 </div>
-<ul ng-cloak ng-hide="auctions.auction.length" class="list-inline nav-buttons">
-
-  <li ng-show="(main.user.id == auctions.auction.user.id)"><a ng-cloak class="btn btn-default"  ui-sref="auctionsEdit({id: auctions.auction.id})">Edit</a></li>
-  <li><a ng-cloak class="btn btn-default" href="javascript:history.back()">Back</a></li>
-  <li ng-show="(main.user.id == auctions.auction.user.id)" id="delete-button" ><a ng-cloak class="btn btn-danger"  ng-click="auctions.delete()">Delete</a></li>
-</ul>

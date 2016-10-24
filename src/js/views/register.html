@@ -1,0 +1,21 @@
+<form class="loginregister" ng-submit="register.register()" id="formTwo">
+  <div class="form-group">
+    <input class="form-control" type="text" name="username" ng-model="register.userRegister.username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="firstName" ng-model="register.userRegister.first_name" placeholder="First name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="lastName" ng-model="register.userRegister.last_name" placeholder="Last name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="email" name="email" ng-model="register.userRegister.email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="password" name="password" ng-model="register.userRegister.password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="password" name="passwordConfirmation" ng-model="register.userRegister.password_confirmation" placeholder="Password confirmation">
+  </div>
+  <input class="btn btn-primary" type="submit" value="Register" />
+</form>

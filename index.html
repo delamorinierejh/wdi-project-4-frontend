@@ -15,13 +15,13 @@
     <nav class="navbar navbar-invert">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" ng-show="main.user" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ng-hide="main.user"><img src="/images/BidUp_logo.png" alt="bid-up-logo" /></a>
+          <a class="navbar-brand" ng-hide="main.user" ui-sref="home"><img src="/images/BidUp_logo.png" alt="bid-up-logo" /></a>
           <a id="mobile-logo" class="navbar-brand" ng-show="main.user" ui-sref-active ui-sref="auctionsIndex" ><img src="/images/BidUp_logo.png" alt="bid-up-logo" /></a>
           <a id="active-logo" class="navbar-brand nav-bar-links" ng-show="main.user" ui-sref-active ui-sref="auctionsIndex" ><img src="/images/BidUp_logo.png" ng-click="main.removeBurger(e)" alt="bid-up-logo" /></a>
         </div>
@@ -39,6 +39,14 @@
             </li>
             <li ng-click="main.toggleBurger()">
               <a class="nav-bar-links" href="#" ng-click="main.logout()">Logout</a>
+            </li>
+          </ul>
+          <ul ng-cloak ng-hide="main.user" class="nav navbar-nav navbar-right">
+            <li ng-click="main.toggleBurger()">
+              <a class="nav-bar-links"  href="#" ui-sref="login">Login</a>
+            </li>
+            <li ng-click="main.toggleBurger()">
+              <a class="nav-bar-links"  href="#" ui-sref="register">Register</a>
             </li>
           </ul>
         </div>

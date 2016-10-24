@@ -22,6 +22,12 @@ function MainCtrl($rootScope, CurrentUserService, $state) {
     $state.go("home");
   });
 
+  vm.toggleBurger = toggleBurger;
+  function toggleBurger(){
+    if (screen.width <= 770) {
+      $('.navbar-toggle').click();
+    }
+  }
 
   // vm.toggleFilter = toggleFilter;
   // function toggleFilter(){

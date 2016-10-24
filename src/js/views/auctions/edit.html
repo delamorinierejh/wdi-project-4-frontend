@@ -1,6 +1,6 @@
 <div class="editalot">
   <h1>Edit a lot</h1>
-  <form class="add-auction" ng-submit="auctions.submit()">
+  <form class="add-auction" ng-submit="auctions.update()">
     <div class="form-group">
       <label>Title</label>
       <input ng-model="auctions.auction.title" class="form-control">
@@ -13,31 +13,11 @@
       <label>Image</label><br>
       <input ng-model="auctions.auction.auction_img" class="form-control">
     </div>
-    <!-- <div ng-hide="auctions.charitiesList" class="">
-      <label for="">Charity</label><br>
-      <input ng-model="auctions.charitySearch" type="search" name="charitysearch" placeholder="{{auction.charity}}">
-      <button ng-click="auctions.searchCharities()" type="button" name="button">Search</button><br>
-    </div>
-    <div class="">
-      <label for="">Choose charity</label>
-      <select name="charitylistchoice" ng-model="auctions.auction.charity">
-        <option ng-repeat="charity in auctions.charitiesList" value="{{charity.charityId}}">{{charity.charityDisplayName}}</option>
-      </select>
-      <button ng-click="auctions.restartSearch()" type="button" name="button">Search again</button><br>
-    </div> -->
-    <!-- <div class="form-group">
-      <label>Start Date</label><br>
-      <input id="startdatefield" type="date" ng-model="auctions.auction.start_date">
-    </div>
-    <div class="form-group">
-      <label>End Date</label><br>
-      <input id="enddatefield" type="date" ng-model="auctions.auction.end_date">
-    </div> -->
     <div class="form-group">
       <label>Reserve</label><br>
       £<input ng-model="auctions.auction.reserve" type="number" min="1.00" step="1.00" max="2500"/>
     </div>
-    <input type="submit" value="Add" class="btn btn-primary">
+    <input type="submit" value="Update" class="btn btn-primary">
     <a href="javascript:history.back()"><input type="button" value="Cancel" class="btn btn-default"></a>
   </form>
 </div>
