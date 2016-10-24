@@ -19,6 +19,18 @@ function HomeCtrl(User, CurrentUserService, $state){
     });
   };
 
+  vm.register = () => {
+    User
+    .register( vm.userRegister )
+    .$promise
+    .then(data => {
+      const user = data.user || null;
+      if (user){
+        CurrentUserService.saveUser(user);
+      }
+    });
+  };
+
   vm.login = () => {
     User
     .login(vm.userLogin)

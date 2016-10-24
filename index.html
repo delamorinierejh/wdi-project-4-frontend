@@ -35,7 +35,7 @@
               <a class="nav-bar-links"  href="#" ui-sref="auctionsNew">Add a lot</a>
             </li>
             <li ng-click="main.toggleBurger()">
-              <a class="nav-bar-links"  href="#" ui-sref="usersIndex">Users</a>
+              <a class="nav-bar-links"  href="#" ui-sref="usersShow({id : main.user.id})">Profile</a>
             </li>
             <li ng-click="main.toggleBurger()">
               <a class="nav-bar-links" href="#" ng-click="main.logout()">Logout</a>
@@ -46,7 +46,7 @@
     </nav>
   </header>
 
-  <main ui-view>
+  <main ui-view class="container">
   </main>
 
   <footer>

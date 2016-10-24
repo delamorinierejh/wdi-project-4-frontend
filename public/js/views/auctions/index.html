@@ -1,6 +1,6 @@
 <h1>Welcome to BidUp</h1>
 <ul>
-  <li ng-repeat="auction in auctions.auctions">
+  <li ng-repeat="auction in auctions.auctions" ui-sref="auctionsShow({ id: auction.id })">
     <h1>{{auction.title}}</h1>
     <h3>{{auction.description}}</h3>
     <img class="pure-img" ng-src="{{auction.auction_img}}" alt="auction.title" />

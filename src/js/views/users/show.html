@@ -1,0 +1,18 @@
+<div class="profilepage">
+  <h1>{{users.user.full_name}}</h1>
+  <img ng-src="" alt="" />
+  <br>
+  <h2>Your auctions</h2>
+  <ul>
+    <li ng-repeat="auction in users.user.auctions">
+      {{auction.title}}
+    </li>
+  </ul>
+  <br>
+  <h2>Your bids</h2>
+  <ul>
+    <li ng-repeat="bid in users.user.bids">
+      {{bid.auction.title}} : £{{bid.amount}}
+    </li>
+  </ul>
+</div>
