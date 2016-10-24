@@ -44,7 +44,7 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider){
   })
   .state("auctionsEdit", {
     url: "/auctions/:id/edit",
-    templateUrl: "/js/views/auctions/edit.html", 
+    templateUrl: "/js/views/auctions/edit.html",
     controller: "AuctionsEditCtrl as auctions"
   })
   .state('auctionsShow', {
