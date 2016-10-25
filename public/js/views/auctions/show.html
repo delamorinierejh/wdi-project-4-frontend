@@ -37,7 +37,7 @@
   </div>
 
   <h2>Bids</h2>
-  <ul>
+  <ul ng-show="auctions.highBid">
     <li ng-repeat="bid in auctions.auction.bids">
       <ul>
         <li>£{{bid.amount}}</li>
@@ -46,6 +46,7 @@
       </ul>
     </li>
   </ul>
+  <h3 ng-hide="auctions.highBid">No bids on this lot yet!</h3>
 
   <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id !== auctions.highBid.user.id))">
     <h2>Place a bid!</h2>

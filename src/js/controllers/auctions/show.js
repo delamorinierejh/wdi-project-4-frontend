@@ -12,13 +12,15 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
     vm.bid = {
       auction_id: vm.auction.id
     };
-    vm.bidMinimum = (parseInt(vm.auction.bids[0].amount) + 1);
-    vm.highBid = vm.auction.bids[0];
+    vm.bidMinimum = 0;
+    if (vm.auction.bids.length){
+      vm.bidMinimum = (parseInt(vm.auction.bids[0].amount) + 1);
+      vm.highBid = vm.auction.bids[0];
+    }
     $http({
       method: 'GET',
       url: `https://api.justgiving.com/780bb3da/v1/charity/search?charityId=${vm.auction.charity}`
     }).then(response => {
-      // console.log(response);
       vm.charity = response.data.charitySearchResults[0];
     });
     vm.deadline = new Date(Date.parse(vm.auction.end_date));
@@ -44,6 +46,7 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
       vm.bid = {
         auction_id : vm.auction
       };
+      vm.highBid.user.id = data.user.id;
     });
   };
 
