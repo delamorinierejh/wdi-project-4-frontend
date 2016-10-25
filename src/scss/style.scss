@@ -29,12 +29,6 @@
   }
 }
 
-
-
-
-
-
-
 body {
   background: #f4f8f9;
   font-family: 'Raleway', sans-serif;
@@ -49,15 +43,29 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-h1 {
+h1.heading {
+  text-shadow: 1px 1px #225560;
   text-align: center;
-  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  background: #70a8b5;
+  margin: 0 -50px;
 }
 
 div.auctionshow {
   ul {
     list-style-type: none;
     padding: 0;
+  }
+}
+
+div.profilepage {
+  ul {
+    li {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -73,7 +81,12 @@ div.auctionsindex{
     li {
       display: inline-block;
       margin: 10px 20px;
+      padding: 10px;
+      &:hover {
+        cursor: pointer;
+      }
       img {
+        margin: 5px;
         margin-bottom: 20px;
       }
       &:hover {
@@ -97,7 +110,7 @@ form.loginregister {
 
 div.herotext{
   text-align: center;
-  display: block;
+  display: none;
   min-height: 160px;
   background-color: #dae8de;
   h1 {
@@ -113,29 +126,41 @@ div.herotext{
   }
 }
 
+div.heroimage{
+  display: block;
+  height:50%;
+  background-color: #3a91b0;
+  img {
+    display: block;
+    width: 83%;
+    margin: 0 auto;
+  }
+}
+
 div.homepage {
   margin: 0 -100px;
 }
 
 div.stepsbanner{
-  min-height: 200px;
+  min-height: 145px;
   background-color: #225560;
   ul{
     list-style-type: none;
     padding: 0;
     text-align: center;
     li {
-      margin: 20px 50px;
+      margin: 10px 50px;
       display: inline-block;
       color: white;
       font-weight: 400;
       font-size: 20px;
       max-width: 240px;
       img {
-        height: 80px;
+        height: 50px;
       }
       p {
         margin-top: 10px;
+        font-size: 20px;
       }
     }
   }
@@ -236,6 +261,7 @@ header {
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
   div.herotext{
+    display: block;
     h1 {
       font-size: 50px;
       line-height: 80px;
@@ -244,6 +270,9 @@ and (max-device-width : 667px) {
       margin-bottom: 20px;
       height: 90px;
     }
+  }
+  div.heroimage {
+    display: none;
   }
   div.auctionsindex{
     ul {

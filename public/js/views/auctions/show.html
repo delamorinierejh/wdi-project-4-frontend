@@ -1,5 +1,5 @@
 <div class="auctionshow">
-  <h1 ng-cloak>{{ auctions.auction.title }}</h1>
+  <h1 class="heading" ng-cloak>{{ auctions.auction.title }}</h1>
   <div ng-hide="auctions.auction.length" ng-cloak>
     <img ng-src="{{ auctions.auction.auction_img }}">
     <ul>
@@ -42,18 +42,25 @@
       <ul>
         <li>£{{bid.amount}}</li>
         <li>{{bid.user.first_name}} {{bid.user.last_name}}</li>
+        <li>{{bid.user.full_name}}</li>
       </ul>
     </li>
   </ul>
 
-  <h2>Place a bid!</h2>
-  <form class="" ng-submit="auctions.placeBid()">
-    <div class="form-group">
-      <label>Amount</label>
-      £<input ng-model="auctions.bid.amount" type="number" min="{{auctions.bidMinimum}}" step="1.00" max="2500"/>
-    </div>
-    <input type="submit" value="Bid!">
-  </form>
+  <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id !== auctions.highBid.user.id))">
+    <h2>Place a bid!</h2>
+    <form class="" ng-submit="auctions.placeBid()">
+      <div class="form-group">
+        <label>Amount</label>
+        £<input ng-model="auctions.bid.amount" type="number" min="{{auctions.bidMinimum}}" step="1.00" max="2500"/>
+      </div>
+      <input type="submit" value="Bid!">
+    </form>
+  </div>
+
+  <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id === auctions.highBid.user.id))">
+    <h2>You currently have the highest bid!</h2>
+  </div>
 
 
 </div>

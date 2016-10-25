@@ -13,6 +13,7 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
       auction_id: vm.auction.id
     };
     vm.bidMinimum = (parseInt(vm.auction.bids[0].amount) + 1);
+    vm.highBid = vm.auction.bids[0];
     $http({
       method: 'GET',
       url: `https://api.justgiving.com/780bb3da/v1/charity/search?charityId=${vm.auction.charity}`
@@ -86,10 +87,6 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
   }
 
   function compare(a,b) {
-    if (a.amount < b.amount)
-    return -1;
-    if (a.amount > b.amount)
-    return 1;
-    return 0;
+    return a.amount - b.amount;
   }
 }
