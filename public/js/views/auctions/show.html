@@ -15,4 +15,45 @@
     <li><a ng-cloak class="btn btn-default" href="javascript:history.back()">Back</a></li>
     <li ng-show="(main.user.id == auctions.auction.user.id)" id="delete-button" ><a ng-cloak class="btn btn-danger"  ng-click="auctions.delete()">Delete</a></li>
   </ul>
+
+  <h2>This bid runs out in:</h2>
+  <div id="clockdiv">
+    <div>
+      <span class="days"></span>
+      <div class="smalltext">Days</div>
+    </div>
+    <div>
+      <span class="hours"></span>
+      <div class="smalltext">Hours</div>
+    </div>
+    <div>
+      <span class="minutes"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div>
+      <span class="seconds"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
+  </div>
+
+  <h2>Bids</h2>
+  <ul>
+    <li ng-repeat="bid in auctions.auction.bids">
+      <ul>
+        <li>£{{bid.amount}}</li>
+        <li>{{bid.user.first_name}} {{bid.user.last_name}}</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Place a bid!</h2>
+  <form class="" ng-submit="auctions.placeBid()">
+    <div class="form-group">
+      <label>Amount</label>
+      £<input ng-model="auctions.bid.amount" type="number" min="{{auctions.bidMinimum}}" step="1.00" max="2500"/>
+    </div>
+    <input type="submit" value="Bid!">
+  </form>
+
+
 </div>

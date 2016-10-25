@@ -16,6 +16,7 @@ function RegisterCtrl(User, CurrentUserService, $state) {
         CurrentUserService.saveUser(user);
       }
     });
+    $("form.register input").css({"border": "1px solid rgba(255,0,0,0.3)"});
   };
 
 }

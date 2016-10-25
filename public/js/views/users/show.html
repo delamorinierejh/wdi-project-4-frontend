@@ -4,14 +4,14 @@
   <br>
   <h2>Your auctions</h2>
   <ul>
-    <li ng-repeat="auction in users.user.auctions">
+    <li ng-repeat="auction in users.user.auctions" ui-sref="auctionsShow({ id: auction.id })">
       {{auction.title}}
     </li>
   </ul>
   <br>
   <h2>Your bids</h2>
   <ul>
-    <li ng-repeat="bid in users.user.bids">
+    <li ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })">
       {{bid.auction.title}} : £{{bid.amount}}
     </li>
   </ul>

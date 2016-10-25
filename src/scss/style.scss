@@ -1,5 +1,40 @@
 @import "bower";
 
+#clockdiv{
+  margin: 0 auto;
+  display: block;
+  font-family: sans-serif;
+  color: #225560;
+  font-weight: 100;
+  text-align: center;
+  font-size: 24px;
+  & > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #225560;
+    display: inline-block;
+  }
+  & div {
+    & span{
+      padding: 15px;
+      border-radius: 3px;
+      background: #dae8de;
+      display: inline-block;
+    }
+  }
+  .smalltext{
+    color: #dae8de;
+    padding-top: 5px;
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
 body {
   background: #f4f8f9;
   font-family: 'Raleway', sans-serif;
@@ -108,6 +143,7 @@ div.stepsbanner{
 
 main {
   min-height: 550px;
+  margin-bottom: 10px;
 }
 
 img#charity-image {
@@ -269,6 +305,7 @@ and (max-device-width : 667px) {
 
 
 footer {
+  margin-top: 20px;
   text-align: center;
   height: 50px;
   line-height: 50px;
