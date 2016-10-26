@@ -5,8 +5,6 @@ angular
 AuctionsIndexCtrl.$inject = ["Auction", "CurrentUserService"];
 function AuctionsIndexCtrl(Auction, CurrentUserService){
   const vm = this;
-  vm.johnnie = "Johnnie";
-  console.log(`${vm.johnnie} is logged in`);
   Auction
   .query()
   .$promise
@@ -14,4 +12,24 @@ function AuctionsIndexCtrl(Auction, CurrentUserService){
     console.log(data);
     vm.auctions = data;
   });
+  vm.sortByReserveAsc = ()=> {
+    vm.auctions.sort(function(a,b){
+      return b.reserve - a.reserve;
+    }).reverse();
+  };
+  vm.sortByReserveDesc = ()=> {
+    vm.auctions.sort(function(a,b){
+      return b.reserve - a.reserve;
+    });
+  };
+  vm.sortByExpirySoonest = ()=> {
+    vm.auctions.sort(function(a,b){
+      return new Date(b.end_date) - new Date(a.end_date);
+    }).reverse();
+  };
+  vm.sortByExpiryFurthest = ()=> {
+    vm.auctions.sort(function(a,b){
+      return new Date(b.end_date) - new Date(a.end_date);
+    });
+  };
 }

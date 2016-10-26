@@ -12,7 +12,8 @@
           <p>
             {{auction.title}}
           </p>
-          <img ng-src="{{auction.auction_img}}" alt="" />
+          <div style="background-image:url({{auction.auction_img}})" class="img">
+          </div>
         </li>
       </ul>
     </div>
@@ -26,7 +27,8 @@
           <p>
             {{bid.auction.title}} : £{{bid.amount}}0
           </p>
-          <img ng-src="{{bid.auction.auction_img}}" alt="" />
+          <div style="background-image:url({{bid.auction.auction_img}})" class="img">
+          </div>
         </li>
       </ul>
     </div>

@@ -1,4 +1,13 @@
 <h1 class="heading">Live Auctions</h1>
+<h4 class="sortheader">
+  Sort by:
+</h4>
+<ul class="sortbuttons">
+  <li><a ng-click="auctions.sortByReserveAsc()">Reserve value (asc)</a></li>
+  <li><a ng-click="auctions.sortByReserveDesc()">Reserve value (desc)</a></li>
+  <li><a ng-click="auctions.sortByExpirySoonest()">Expiry (soonest)</a></li>
+  <li><a ng-click="auctions.sortByExpiryFurthest()">Expiry (latest)</a></li>
+</ul>
 <div class="auctionsindex container">
   <ul>
     <li class="indexauction" ng-repeat="auction in auctions.auctions" ui-sref="auctionsShow({ id: auction.id })">
@@ -7,10 +16,13 @@
         <h3>{{auction.description}}</h3>
         <br>
         <p>
-          Uploaded by: {{auction.user.full_name}}
+          Reserve: £{{auction.reserve}}0
         </p>
       </div>
-      <img class="pure-img" ng-src="{{auction.auction_img}}" alt="auction.title" />
+      <div class="indeximage" style="background-image:url({{auction.auction_img}}) ">
+
+      </div>
+      <!-- <img class="pure-img" ng-src="{{auction.auction_img}}" alt="auction.title" /> -->
     </li>
   </ul>
 </div>

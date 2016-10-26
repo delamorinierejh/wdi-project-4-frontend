@@ -1,5 +1,7 @@
 @import "bower";
 
+
+
 div.profilepage {
   margin-top: 20px;
   div.profilecolumns {
@@ -24,11 +26,14 @@ div.profilepage {
           font-size: 16px;
           margin-left: 10px;
         }
-        img {
+        div.img {
+          width: 80px;
           height: 60px;
-          width: auto;
           float: right;
           margin-top: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
           border-radius: 0 20px 20px 0;
         }
       }
@@ -80,7 +85,7 @@ div.bidinfo {
     padding: 8px;
     background-color: #225560;
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 10px;
     font-weight: 100;
   }
@@ -245,6 +250,38 @@ div.auctionshow {
   }
 }
 
+h4.sortheader{
+  text-align: center;
+  margin: 10px;
+}
+
+ul.sortbuttons {
+  margin-top: 10px;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  li {
+    margin: 10px;
+    display: inline-block;
+    a {
+      display: block;
+      width: 160px;
+      font-size: 12px;
+      padding: 8px;
+      text-transform: uppercase;
+      border: 2px solid #225560;
+      text-decoration: none !important;
+      color: #225560;
+      &:hover, &:focus {
+        cursor: pointer;
+        background: #225560;
+        color: white;
+        transition: 0.2s all;
+      }
+
+    }
+  }
+}
 
 div.auctionsindex{
   margin-top: 20px;
@@ -259,10 +296,13 @@ div.auctionsindex{
       &:hover {
         cursor: pointer;
       }
-      img {
+      div.indeximage {
         height: 150px;
-        width: auto;
+        width: 150px;
         float: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
       }
       &:hover {
         box-shadow: 0 0 5px #225560;
@@ -444,6 +484,9 @@ header {
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
+  ul.sortbuttons, h4.sortheader{
+    display: none;
+  }
   #clockdiv{
     width: 90%;
   }
@@ -469,8 +512,9 @@ and (max-device-width : 667px) {
         display: block;
         width: 100%;
         margin: 10px 0;
-        img {
-          height: auto;
+        div.indeximage {
+          display: block;
+          height: 280px;
           width: 100%;
           float: none;
         }
@@ -516,7 +560,7 @@ and (max-device-width : 667px) {
     margin-top: 20px;
     div.profilecolumns {
       img {
-        margin-top: 5px;
+        // margin-top: 5px;
       }
     }
   }
