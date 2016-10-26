@@ -48,6 +48,8 @@ div.profilepage {
     }
     img {
       width: 100%;
+      border: 2px ridge #225560;
+      border-radius: 50px;
       max-width: 250px;
       margin-top: 50px;
     }
@@ -114,6 +116,7 @@ div.bidinfo {
       font-family: 'Lato';
       text-decoration: none !important;
       &:hover {
+        cursor: pointer;
         background: #4099ff;
         color: white;
         text-decoration: none;
@@ -517,6 +520,7 @@ and (max-device-width : 667px) {
           height: 280px;
           width: 100%;
           float: none;
+          background-position: top;
         }
         div.text{
           width: 100%;
@@ -560,7 +564,7 @@ and (max-device-width : 667px) {
     margin-top: 20px;
     div.profilecolumns {
       img {
-        // margin-top: 5px;
+        margin-top: 5px;
       }
     }
   }
