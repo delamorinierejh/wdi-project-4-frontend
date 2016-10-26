@@ -7,6 +7,7 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
   const vm = this;
   Auction.get($stateParams, data => {
     console.log(data);
+    window.scrollTo(0, 0);
     vm.auction = data;
     vm.auction.bids.sort(compare).reverse();
     vm.user = CurrentUserService.getUser();

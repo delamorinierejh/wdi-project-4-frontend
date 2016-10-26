@@ -29,11 +29,4 @@ function MainCtrl($rootScope, CurrentUserService, $state) {
     }
   }
 
-  // vm.toggleFilter = toggleFilter;
-  // function toggleFilter(){
-  //   event.stopPropagation();
-  //   event.preventDefault();
-  //   $("#menu-toggle").toggleClass("clicked");
-  //   $("#sidebar-wrapper").toggleClass("active");
-  // }
 }

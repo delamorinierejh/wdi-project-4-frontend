@@ -1,6 +1,6 @@
 <h1 class="heading">Add a lot</h1>
-<div class="addalot container">
-  <form class="add-auction" ng-submit="auctions.submit()">
+<div class="container">
+  <form class="addalot" ng-submit="auctions.submit()">
     <div class="form-group">
       <label>Title</label>
       <input ng-model="auctions.auction.title" class="form-control">
@@ -13,12 +13,12 @@
       <label>Image</label><br>
       <input ng-model="auctions.auction.auction_img" class="form-control">
     </div>
-    <div ng-hide="auctions.charitiesList" class="">
+    <div ng-hide="auctions.charitiesList" class="charityselector">
       <label for="">Charity</label><br>
       <input ng-model="auctions.charitySearch" type="search" name="charitysearch">
       <button ng-click="auctions.searchCharities()" type="button" name="button">Search</button><br>
     </div>
-    <div ng-show="auctions.charitiesList" class="">
+    <div ng-show="auctions.charitiesList" class="charityselector">
       <label for="">Choose charity</label>
       <select name="charitylistchoice" ng-model="auctions.auction.charity">
         <option ng-repeat="charity in auctions.charitiesList" value="{{charity.charityId}}">{{charity.charityDisplayName}}</option>
