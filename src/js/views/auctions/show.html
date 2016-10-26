@@ -79,7 +79,7 @@
       </ul>
       <h3 ng-hide="auctions.highBid">No bids on this lot yet!</h3>
 
-      <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id !== auctions.highBid.user.id))" ng-hide="auctions.highBid">
+      <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id !== auctions.highBid.user.id))" ng-show="auctions.highBid">
         <h2>Place a bid!</h2>
         <form class="" ng-submit="auctions.placeBid()">
           <div class="form-group">

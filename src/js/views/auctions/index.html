@@ -8,7 +8,7 @@
   <li><a ng-click="auctions.sortByExpirySoonest()">Expiry (soonest)</a></li>
   <li><a ng-click="auctions.sortByExpiryFurthest()">Expiry (latest)</a></li>
 </ul>
-<div class="auctionsindex container">
+<div class="auctionsindex">
   <ul>
     <li class="indexauction" ng-repeat="auction in auctions.auctions" ui-sref="auctionsShow({ id: auction.id })">
       <div class="text">
