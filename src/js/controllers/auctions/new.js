@@ -22,9 +22,7 @@ function AuctionsNewCtrl(Auction, $state, CurrentUserService, $http){
         method: 'GET',
         url: `https://api.justgiving.com/780bb3da/v1/charity/search?q=${vm.charitySearch}&pageSize=5`
       }).then(response => {
-        console.log(response);
         vm.charitiesList = response.data.charitySearchResults;
-        console.log(vm.charitiesList);
       });
     }
   }

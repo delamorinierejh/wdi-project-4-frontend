@@ -19,6 +19,9 @@ and (max-device-width : 667px) {
       height: 90px;
     }
   }
+  div.stepsbanner {
+    padding: 80px 0;
+  }
   div.heroimage {
     display: none;
   }
@@ -28,7 +31,6 @@ and (max-device-width : 667px) {
       li {
         display: block;
         width: 100%;
-        margin: 10px 0;
         div.indeximage {
           display: block;
           height: 280px;
@@ -42,8 +44,10 @@ and (max-device-width : 667px) {
           h1 {
             font-size: 24px;
             text-transform: uppercase;
+            margin-bottom: -10px;
           }
           h3 {
+            display: none;
             text-align: justify;
             font-size: 16px;
           }

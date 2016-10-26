@@ -28,5 +28,4 @@ function MainCtrl($rootScope, CurrentUserService, $state) {
       $('.navbar-toggle').click();
     }
   }
-
 }
