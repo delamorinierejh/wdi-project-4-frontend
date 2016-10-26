@@ -1,25 +1,35 @@
 <h1 class="heading">{{users.user.full_name}}</h1>
 <div class="profilepage container">
-  <div class="col-md-3 profilecolumns">
+  <div class="col-md-4 profilecolumns one">
     <img ng-src="{{users.user.profile_img}}" alt="{{users.user.full_name}}" />
   </div>
 
-  <div class="col-md-3 profilecolumns">
-    <h2>Your auctions</h2>
-    <ul >
-      <li ng-repeat="auction in users.user.auctions" ui-sref="auctionsShow({ id: auction.id })">
-        {{auction.title}}
-      </li>
-    </ul>
+  <div class="col-md-4">
+    <div class="profilecolumns two">
+      <h2>Your auctions</h2>
+      <ul >
+        <li class="auctionsdata" ng-repeat="auction in users.user.auctions" ui-sref="auctionsShow({ id: auction.id })">
+          <p>
+            {{auction.title}}
+          </p>
+          <img ng-src="{{auction.auction_img}}" alt="" />
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="col-md-6 profilecolumns">
-    <h2>Your bids</h2>
-    <ul >
-      <li ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })">
-        {{bid.auction.title}} : £{{bid.amount}}
-      </li>
-    </ul>
+  <div class="col-md-4">
+    <div class="profilecolumns three">
+      <h2>Your bids</h2>
+      <ul >
+        <li class="bidsdata" ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })">
+          <p>
+            {{bid.auction.title}} : £{{bid.amount}}
+          </p>
+          <img ng-src="{{bid.auction.auction_img}}" alt="" />
+        </li>
+      </ul>
+    </div>
   </div>
 
 

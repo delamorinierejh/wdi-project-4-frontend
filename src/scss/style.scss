@@ -1,8 +1,41 @@
 @import "bower";
 
 div.profilepage {
+  margin-top: 20px;
   div.profilecolumns {
+    color: black;
     text-align: center;
+    min-height: 300px;
+    border-radius: 10px;
+    h2 {
+      padding: 10px;
+    }
+    ul {
+      li {
+        color: white;
+        margin: 10px 10px;
+        height: 60px;
+        background: #8dba9a;
+        border-radius: 20px;
+        p {
+          float: left;
+          display: inline;
+          line-height: 60px;
+          font-size: 16px;
+          margin-left: 10px;
+        }
+        img {
+          height: 60px;
+          width: auto;
+          float: right;
+          margin-top: 0;
+          border-radius: 0 20px 20px 0;
+        }
+      }
+      li.bidsdata {
+        background: #548c64;
+      }
+    }
     ul {
       list-style-type: none;
       margin: 0;
@@ -10,6 +43,8 @@ div.profilepage {
     }
     img {
       width: 100%;
+      max-width: 250px;
+      margin-top: 50px;
     }
   }
   ul {
@@ -437,6 +472,14 @@ and (max-device-width : 667px) {
       margin-top: 50px;
       display: block;
       width: 90%;
+    }
+  }
+  div.profilepage {
+    margin-top: 20px;
+    div.profilecolumns {
+      img {
+        margin-top: 5px;
+      }
     }
   }
 
