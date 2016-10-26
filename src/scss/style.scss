@@ -5,7 +5,7 @@ div.profilepage {
   div.profilecolumns {
     color: black;
     text-align: center;
-    min-height: 300px;
+    min-height: 100px;
     border-radius: 10px;
     h2 {
       padding: 10px;
@@ -57,8 +57,8 @@ div.profilepage {
 }
 
 div.column {
-    min-height: 300px;
-  }
+  min-height: 300px;
+}
 
 div.bidinfo {
   display: block;
@@ -92,29 +92,37 @@ div.bidinfo {
     float: left;
     border-radius: 10px;
   }
-  a.twitter-share-button{
-    border: 2px solid #225560;
-    padding: 5px 10px;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #225560;
-    letter-spacing: 2px;
-    font-family: 'Lato';
-    text-decoration: none !important;
-    &:hover {
-      background: #4099ff;
-      color: white;
-      text-decoration: none;
-      transition: 0.2s all;
-    }
-    &.edit {
+  div.topbidbit {
+    display: block;
+    min-height: 340px;
+  }
+  div.showbuttons {
+    display: block;
+    text-align: center;
+    a.twitter-share-button{
+      border: 2px solid #225560;
+      padding: 5px 10px;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #225560;
+      letter-spacing: 2px;
+      font-family: 'Lato';
+      text-decoration: none !important;
       &:hover {
-        background: #456b49;
+        background: #4099ff;
+        color: white;
+        text-decoration: none;
+        transition: 0.2s all;
       }
-    }
-    &.delete {
-      &:hover {
-        background: #c43d4b;
+      &.edit {
+        &:hover {
+          background: #456b49;
+        }
+      }
+      &.delete {
+        &:hover {
+          background: #c43d4b;
+        }
       }
     }
   }
@@ -135,7 +143,7 @@ div.bidslist {
     padding: 10px;
   }
   li {
-          margin: 0 auto;
+    margin: 0 auto;
     ul.eachbid {
       margin: 10px 100px;
       padding: 10px;
@@ -145,12 +153,25 @@ div.bidslist {
       font-size: 18px;
     }
   }
-
+  input.bidbutton {
+    background:none;
+    border: 2px solid #225560;
+    padding: 5px 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #225560;
+    letter-spacing: 2px;
+    font-family: 'Lato';
+    text-decoration: none !important;
+    &:hover {
+      background: #456b49;
+      transition: 0.2s all;
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
-div.showbuttons {
-  text-align: center;
-}
 
 div.middlesection {
   display: block;
@@ -226,36 +247,36 @@ div.auctionshow {
 
 
 div.auctionsindex{
-  h1 {
-    text-align: center;
-  }
+  margin-top: 20px;
   ul {
     padding: 0;
-    margin: 0;
-    margin-top: 20px;
     list-style-type: none;
     li {
-      display: inline-block;
-      margin: 10px 20px;
+      margin: 10px 0;
       padding: 10px;
       border-radius: 10px;
+      min-height: 170px;
       &:hover {
         cursor: pointer;
       }
       img {
-        margin: 5px;
-        margin-bottom: 20px;
+        height: 150px;
+        width: auto;
+        float: right;
       }
       &:hover {
         box-shadow: 0 0 5px #225560;
       }
-      h1 {
-        font-size: 18px;
-        text-transform: uppercase;
-      }
-      h3 {
-        text-align: center;
-        font-size: 14px;
+      .text {
+        // float: left;
+        h1 {
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+        h3 {
+          text-align: left;
+          font-size: 14px;
+        }
       }
     }
   }
@@ -294,9 +315,9 @@ div.heroimage{
   }
 }
 
-// div.homepage {
-//   margin: 0 -100px;
-// }
+div.homepage {
+  background: #225560;
+}
 
 div.stepsbanner{
   min-height: 145px;
@@ -324,18 +345,20 @@ div.stepsbanner{
 }
 
 main {
-  min-height: 550px;
   font-family: 'Lato', cursive;
 }
 
 img#charity-image {
-  max-height: 50px;
+  max-height: 90px;
 }
 
 div.homepage {
   h1  {
     text-align: center;
     margin-top: 200px;
+  }
+  ul {
+    margin: 0;
   }
 }
 
@@ -422,6 +445,7 @@ and (max-device-width : 667px) {
   }
   div.herotext{
     display: block;
+    padding: 160px 0;
     h1 {
       font-size: 50px;
       line-height: 80px;
@@ -442,14 +466,19 @@ and (max-device-width : 667px) {
         width: 100%;
         margin: 10px 0;
         img {
+          height: auto;
           width: 100%;
+          float: none;
         }
-        h1 {
-          font-size: 24px;
-          text-transform: uppercase;
-        }
-        h3 {
-          font-size: 20px;
+        div.text{
+          float: none;
+          h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+          }
+          h3 {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -500,18 +529,22 @@ and (max-device-width : 667px) {
   }
 }
 
-//
-// footer {
-//   text-align: center;
-//   height: 50px;
-//   line-height: 50px;
-//   width: 100%;
-//   background-color: #225560;
-//   h3 {
-//     margin: 0;
-//     padding: 0;
-//     font-size: 20px;
-//     line-height: 50px;
-//     color: white;
-//   }
-// }
+
+footer {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: #225560;
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+  }
+}
+
+div.addalot {
+  margin-top: 20px;
+}

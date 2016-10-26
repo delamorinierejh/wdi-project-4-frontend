@@ -2,7 +2,7 @@
 
 <div class="auctionshow">
   <div class="bidinfo">
-    <div ng-hide="auctions.auction.length" ng-cloak>
+    <div class="topbidbit" ng-cloak>
       <div class="column col-md-4">
         <h3>The Lot</h3>
         <img class="mainimg" ng-src="{{ auctions.auction.auction_img }}">
@@ -11,21 +11,21 @@
         </ul>
 
       </div>
-    </div>
-    <div class="column col-md-4 charityinfo">
-      <h3>The Charity</h3>
-      <ul>
-        <li><h4 ng-cloak>{{auctions.charity.charityDisplayName}}</h4></li>
-        <li><p class="charityblurb" ng-cloak>{{auctions.charity.description}}</p></li>
-        <li><img id="charity-image" ng-src="{{auctions.charity.logoUrl}}" alt="" /></li>
-      </ul>
-    </div>
-    <div class="column col-md-4">
-      <h3>Uploader</h3>
-      <img class="mainimg" ng-src="{{auctions.auction.user.profile_img}}" alt="{{auctions.auction.user.username}}" />
-      <p>
-        {{auctions.auction.user.full_name}}
-      </p>
+      <div class="column col-md-4 charityinfo">
+        <h3>The Charity</h3>
+        <ul>
+          <li><h4 ng-cloak>{{auctions.charity.charityDisplayName}}</h4></li>
+          <li><p class="charityblurb" ng-cloak>{{auctions.charity.description}}</p></li>
+          <li><img id="charity-image" ng-src="{{auctions.charity.logoUrl}}" alt="" /></li>
+        </ul>
+      </div>
+      <div class="column col-md-4">
+        <h3>Uploader</h3>
+        <img class="mainimg" ng-src="{{auctions.auction.user.profile_img}}" alt="{{auctions.auction.user.username}}" />
+        <p>
+          {{auctions.auction.user.full_name}}
+        </p>
+      </div>
     </div>
     <div class="showbuttons">
       <ul ng-cloak ng-hide="auctions.auction.length" class="list-inline nav-buttons">
@@ -86,7 +86,7 @@
             <label>Amount</label>
             £<input ng-model="auctions.bid.amount" type="number" min="{{auctions.bidMinimum}}" step="1.00" max="2500"/>
           </div>
-          <input type="submit" value="Bid!">
+          <input class="bidbutton" type="submit" value="Bid!">
         </form>
       </div>
 
