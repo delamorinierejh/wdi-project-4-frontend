@@ -1,22 +1,36 @@
 <div class="auctionshow">
   <h1 class="heading" ng-cloak>{{ auctions.auction.title }}</h1>
+<div class="bidinfo">
   <div ng-hide="auctions.auction.length" ng-cloak>
-    <img ng-src="{{ auctions.auction.auction_img }}">
+    <div class="col-md-4">
+      <h3>The Lot</h3>
+      <img ng-src="{{ auctions.auction.auction_img }}">
+      <ul>
+        <li><p ng-cloak>{{auctions.auction.description}}</p></li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-md-4 charityinfo">
+    <h3>The Charity</h3>
     <ul>
-      <li><p ng-cloak>{{auctions.auction.description}}</p></li>
-      <li><p ng-cloak>Charity: {{auctions.charity.charityDisplayName}}</p></li>
+      <li><h4 ng-cloak>{{auctions.charity.charityDisplayName}}</h4></li>
       <li><p ng-cloak>{{auctions.charity.description}}</p></li>
       <li><img id="charity-image" ng-src="{{auctions.charity.logoUrl}}" alt="" /></li>
     </ul>
   </div>
-  <ul ng-cloak ng-hide="auctions.auction.length" class="list-inline nav-buttons">
+  <div class="col-md-4">
+    <h3>Uploaded by:</h3>
+    <img ng-src="{{auctions.auction.user.profile_img}}" alt="{{auctions.auction.user.username}}" />
+    <p>
+      {{auctions.auction.user.full_name}}
+    </p>
+  </div>
+</div>
 
-    <li ng-show="(main.user.id == auctions.auction.user.id)"><a ng-cloak class="btn btn-default"  ui-sref="auctionsEdit({id: auctions.auction.id})">Edit</a></li>
-    <li><a ng-cloak class="btn btn-default" href="javascript:history.back()">Back</a></li>
-    <li ng-show="(main.user.id == auctions.auction.user.id)" id="delete-button" ><a ng-cloak class="btn btn-danger"  ng-click="auctions.delete()">Delete</a></li>
-  </ul>
 
-  <h2>This bid runs out in:</h2>
+  <h2 ng-hide="(main.user.id == auctions.auction.user.id)">This bid runs out in:</h2>
+  <h2 ng-show="(main.user.id == auctions.auction.user.id)">Your bid runs out in:</h2>
   <div id="clockdiv">
     <div>
       <span class="days"></span>
@@ -63,5 +77,11 @@
     <h2>You currently have the highest bid!</h2>
   </div>
 
+  <ul ng-cloak ng-hide="auctions.auction.length" class="list-inline nav-buttons">
+
+    <li ng-show="(main.user.id == auctions.auction.user.id)"><a ng-cloak class="btn btn-default"  ui-sref="auctionsEdit({id: auctions.auction.id})">Edit</a></li>
+    <li><a ng-cloak class="btn btn-default" href="javascript:history.back()">Back</a></li>
+    <li ng-show="(main.user.id == auctions.auction.user.id)" id="delete-button" ><a ng-cloak class="btn btn-danger"  ng-click="auctions.delete()">Delete</a></li>
+  </ul>
 
 </div>

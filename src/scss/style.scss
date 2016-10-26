@@ -1,5 +1,46 @@
 @import "bower";
 
+div.profilepage {
+  div.profilecolumns {
+    text-align: center;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    li {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+
+div.bidinfo {
+  display: block;
+  width: 100%;
+  text-align: center;
+  // border: 1px solid black;
+  min-height: 300px;
+  padding: 10px;
+  h3 {
+    padding: 5px;
+  }
+  div.charityinfo {
+    p {
+      text-align: justify;
+    }
+  }
+}
+
 #clockdiv{
   margin: 0 auto;
   display: block;
@@ -60,15 +101,6 @@ div.auctionshow {
   }
 }
 
-div.profilepage {
-  ul {
-    li {
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-}
 
 div.auctionsindex{
   h1 {

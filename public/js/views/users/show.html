@@ -1,8 +1,10 @@
 <div class="profilepage">
   <h1 class="heading">{{users.user.full_name}}</h1>
-  <br>
+  <div class="col-md-3 profilecolumns">
+    <img ng-src="{{users.user.profile_img}}" alt="{{users.user.full_name}}" />
+  </div>
 
-  <div class="col-md-6">
+  <div class="col-md-3 profilecolumns">
     <h2>Your auctions</h2>
     <ul >
       <li ng-repeat="auction in users.user.auctions" ui-sref="auctionsShow({ id: auction.id })">
@@ -11,7 +13,7 @@
     </ul>
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-6 profilecolumns">
     <h2>Your bids</h2>
     <ul >
       <li ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })">
