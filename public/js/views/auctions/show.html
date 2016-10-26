@@ -30,10 +30,12 @@
     <div class="showbuttons">
       <ul ng-cloak ng-hide="auctions.auction.length" class="list-inline nav-buttons">
 
-        <li ng-show="(main.user.id == auctions.auction.user.id)"><a ng-cloak class="btn btn-default"  ui-sref="auctionsEdit({id: auctions.auction.id})">Edit</a></li>
-        <li ng-show="(main.user.id == auctions.auction.user.id)" id="delete-button" ><a ng-cloak class="btn btn-danger"  ng-click="auctions.delete()">Delete</a></li>
+        <li ng-show="(main.user.id == auctions.auction.user.id)"><a ng-cloak class="twitter-share-button edit"  ui-sref="auctionsEdit({id: auctions.auction.id})">Edit</a></li>
+        <li ng-show="(main.user.id == auctions.auction.user.id)" id="delete-button" ><a ng-cloak class="twitter-share-button delete"  ng-click="auctions.delete()">Delete</a></li>
+        <li><a href="https://twitter.com/share?text=Please+bid+on+this+lot+to+help+raise+money+for+{{auctions.charity.charityDisplayName}}!" target="blank" class="twitter-share-button" data-show-count="false">Tweet</a></li>
       </ul>
     </div>
+
   </div>
 
 

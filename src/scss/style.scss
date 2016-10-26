@@ -33,6 +33,7 @@ div.bidinfo {
   background-color: #dae8de;
   min-height: 300px;
   padding: 10px;
+  padding-bottom: 20px;
   p {
     text-align: left;
     &.charityblurb {
@@ -55,6 +56,32 @@ div.bidinfo {
     max-width: 240px;
     float: left;
     border-radius: 10px;
+  }
+  a.twitter-share-button{
+    border: 2px solid #225560;
+    padding: 5px 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #225560;
+    letter-spacing: 2px;
+    font-family: 'Lato';
+    text-decoration: none !important;
+    &:hover {
+      background: #4099ff;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s all;
+    }
+    &.edit {
+      &:hover {
+        background: #456b49;
+      }
+    }
+    &.delete {
+      &:hover {
+        background: #c43d4b;
+      }
+    }
   }
 }
 
@@ -142,6 +169,7 @@ a.navbar-brand:hover{
 h1, h2, h3, h4 {
   padding: 0;
   margin: 0;
+  font-family: "Raleway", cursive;
 }
 
 h1.heading {
@@ -262,6 +290,7 @@ div.stepsbanner{
 
 main {
   min-height: 550px;
+  font-family: 'Lato', cursive;
 }
 
 img#charity-image {
