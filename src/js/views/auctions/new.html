@@ -1,4 +1,5 @@
 <div class="addalot">
+  {{auctions.auction}}
   <h1 class="heading">Add a lot</h1>
   <form class="add-auction" ng-submit="auctions.submit()">
     <div class="form-group">
@@ -26,8 +27,8 @@
       <button ng-click="auctions.restartSearch()" type="button" name="button">Search again</button><br>
     </div>
     <div class="form-group">
-      <label>End Date</label><br>
-      <input id="enddatefield" type="date" ng-model="auctions.auction.end_date">
+      <label>When should it close?</label><br>
+      <input id="enddatefield" type="datetime-local" ng-model="auctions.auction.end_date">
     </div>
     <div class="form-group">
       <label>Reserve</label><br>

@@ -6,6 +6,7 @@ AuctionsShowCtrl.$inject = ["Auction", "Bid", "CurrentUserService", "$stateParam
 function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state, $http){
   const vm = this;
   Auction.get($stateParams, data => {
+    console.log(data);
     vm.auction = data;
     vm.auction.bids.sort(compare).reverse();
     vm.user = CurrentUserService.getUser();

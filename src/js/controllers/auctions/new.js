@@ -5,8 +5,8 @@ angular
 AuctionsNewCtrl.$inject = ["Auction", "$state", 'CurrentUserService', '$http'];
 function AuctionsNewCtrl(Auction, $state, CurrentUserService, $http){
   const vm = this;
-  console.log("I am loaded");
   vm.submit = () => {
+    vm.auction.date += (8*60*60);
     Auction
     .save({ auction: vm.auction })
     .$promise
