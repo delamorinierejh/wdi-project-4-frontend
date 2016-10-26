@@ -1,0 +1,101 @@
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  ul.sortbuttons, h4.sortheader{
+    display: none;
+  }
+  #clockdiv{
+    width: 90%;
+  }
+  div.herotext{
+    display: block;
+    padding: 160px 0;
+    h1 {
+      font-size: 50px;
+      line-height: 80px;
+    }
+    img {
+      margin-bottom: 20px;
+      height: 90px;
+    }
+  }
+  div.heroimage {
+    display: none;
+  }
+  div.auctionsindex{
+    ul {
+      text-align: center;
+      li {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        div.indeximage {
+          display: block;
+          height: 280px;
+          width: 100%;
+          float: none;
+          background-position: top;
+        }
+        div.text{
+          width: 100%;
+          float: none;
+          h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+          }
+          h3 {
+            text-align: justify;
+            font-size: 16px;
+          }
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    a {
+      padding: 0;
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+  }
+  ul.homeforms {
+    margin-top: 15px;
+    li {
+      margin: 20px;
+      margin-top: 50px;
+      display: block;
+      width: 90%;
+    }
+  }
+  div.profilepage {
+    margin-top: 20px;
+    div.profilecolumns {
+      img {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+  a#active-logo{
+    display: none;
+  }
+  a#menu-toggle, #sidebar-nav {
+    display: none;
+  }
+  a#mobile-logo {
+    display: inline;
+  }
+  footer {
+    display: none;
+  }
+}

@@ -1,0 +1,172 @@
+div.auctionshow {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+
+img#charity-image {
+  max-height: 90px;
+}
+
+
+div.bidinfo {
+  display: block;
+  width: 100%;
+  text-align: center;
+  // border: 1px solid black;
+  background-color: #dae8de;
+  min-height: 300px;
+  padding: 10px;
+  padding-bottom: 20px;
+  p {
+    text-align: left;
+    &.charityblurb {
+      text-align: justify;
+    }
+  }
+  h3 {
+    text-transform: uppercase;
+    padding: 8px;
+    background-color: #225560;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-weight: 100;
+  }
+  img.mainimg {
+    margin-right: 5px;
+    width: 50%;
+    height: auto;
+    max-width: 240px;
+    float: left;
+    border-radius: 10px;
+  }
+  div.topbidbit {
+    display: block;
+    min-height: 340px;
+  }
+  div.showbuttons {
+    display: block;
+    text-align: center;
+    a.twitter-share-button{
+      border: 2px solid #225560;
+      padding: 5px 10px;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #225560;
+      letter-spacing: 2px;
+      font-family: 'Lato';
+      text-decoration: none !important;
+      &:hover {
+        cursor: pointer;
+        background: #4099ff;
+        color: white;
+        text-decoration: none;
+        transition: 0.2s all;
+      }
+      &.edit {
+        &:hover {
+          background: #456b49;
+        }
+      }
+      &.delete {
+        &:hover {
+          background: #c43d4b;
+        }
+      }
+    }
+  }
+}
+
+
+div.column {
+  min-height: 300px;
+}
+
+
+
+
+h2.clockheader {
+  text-align: center;
+  padding: 10px;
+}
+
+div.bidslist {
+  background-color: #dae8de;
+  text-align: center;
+  padding-bottom: 20px;
+  h2 {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  li {
+    margin: 0 auto;
+    ul.eachbid {
+      margin: 10px 100px;
+      padding: 10px;
+      border-radius: 15px;
+      background: #225560;
+      color: white;
+      font-size: 18px;
+    }
+  }
+  input.bidbutton {
+    background:none;
+    border: 2px solid #225560;
+    padding: 5px 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #225560;
+    letter-spacing: 2px;
+    font-family: 'Lato';
+    text-decoration: none !important;
+    &:hover {
+      background: #456b49;
+      transition: 0.2s all;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+div.middlesection {
+  display: block;
+  min-height: 230px;
+}
+
+#clockdiv{
+  background: #225560;
+  width: 33%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+  font-family: sans-serif;
+  color: #225560;
+  font-weight: 100;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px #225560;
+  & > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #225560;
+    display: inline-block;
+  }
+  & div {
+    & span{
+      width: 52px;
+      padding: 15px;
+      border-radius: 3px;
+      background: #dae8de;
+      display: inline-block;
+    }
+  }
+  .smalltext{
+    color: #dae8de;
+    padding-top: 5px;
+    font-size: 12px;
+  }
+}

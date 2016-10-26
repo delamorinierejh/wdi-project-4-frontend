@@ -1,0 +1,39 @@
+body {
+  background: #f4f8f9;
+  font-family: 'Raleway', sans-serif;
+}
+
+main {
+  font-family: 'Lato', cursive;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", cursive;
+}
+h1.heading {
+  text-transform: uppercase;
+  text-shadow: 0 0 3px #225560;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  background: #70a8b5;
+  font-weight: 700;
+}
+
+
+footer {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: #225560;
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+  }
+}
