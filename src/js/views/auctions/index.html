@@ -1,5 +1,5 @@
-<div class="auctionsindex">
-  <h1 class="heading">Live Auctions</h1>
+<h1 class="heading">Live Auctions</h1>
+<div class="auctionsindex container">
   <ul>
     <li ng-repeat="auction in auctions.auctions" ui-sref="auctionsShow({ id: auction.id })">
       <h1>{{auction.title}}</h1>

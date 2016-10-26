@@ -13,7 +13,7 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
     vm.bid = {
       auction_id: vm.auction.id
     };
-    vm.bidMinimum = 0;
+    vm.bidMinimum = vm.auction.reserve;
     if (vm.auction.bids.length){
       vm.bidMinimum = (parseInt(vm.auction.bids[0].amount) + 1);
       vm.highBid = vm.auction.bids[0];
@@ -45,9 +45,9 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
       console.log(data);
       vm.auction.bids.unshift(data);
       vm.bid = {
-        auction_id : vm.auction
+        auction_id : vm.auction.id
       };
-      vm.highBid.user.id = data.user.id;
+      vm.highBid = data;
     });
   };
 
