@@ -268,22 +268,26 @@ div.auctionsindex{
         box-shadow: 0 0 5px #225560;
       }
       .text {
-        // float: left;
+        float: left;
+        width: 80%;
         h1 {
+          font-weight: 600;
           font-size: 18px;
           text-transform: uppercase;
         }
         h3 {
+          font-family: "Lato", cursive;
+          font-weight: 100;
           text-align: left;
-          font-size: 14px;
+          font-size: 16px;
         }
       }
     }
   }
 }
 
-form.loginregister {
-  margin-top: 80px;
+textarea.form-control {
+  height: 82px;
 }
 
 div.herotext{
@@ -471,13 +475,18 @@ and (max-device-width : 667px) {
           float: none;
         }
         div.text{
+          width: 100%;
           float: none;
           h1 {
             font-size: 24px;
             text-transform: uppercase;
           }
           h3 {
-            font-size: 20px;
+            text-align: justify;
+            font-size: 16px;
+          }
+          p {
+            margin-bottom: 10px;
           }
         }
       }

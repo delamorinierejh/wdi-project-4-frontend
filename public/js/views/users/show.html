@@ -24,7 +24,7 @@
       <ul >
         <li class="bidsdata" ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })">
           <p>
-            {{bid.auction.title}} : £{{bid.amount}}
+            {{bid.auction.title}} : £{{bid.amount}}0
           </p>
           <img ng-src="{{bid.auction.auction_img}}" alt="" />
         </li>
