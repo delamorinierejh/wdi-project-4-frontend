@@ -290,15 +290,15 @@ div.auctionsindex{
     list-style-type: none;
     li {
       margin: 10px 0;
-      padding: 10px;
+      padding: 15px;
       border-radius: 10px;
-      min-height: 170px;
+      min-height: 180px;
       &:hover {
         cursor: pointer;
       }
       div.indeximage {
         height: 150px;
-        width: 150px;
+        width: 20%;
         float: right;
         background-size: contain;
         background-repeat: no-repeat;
@@ -307,9 +307,9 @@ div.auctionsindex{
       &:hover {
         box-shadow: 0 0 5px #225560;
       }
-      .text {
+      div.text {
         float: left;
-        width: 80%;
+        width: 78%;
         h1 {
           font-weight: 600;
           font-size: 18px;
