@@ -10,6 +10,13 @@ img#charity-image {
   max-height: 90px;
 }
 
+input#bidbox{
+  width: 140px;
+  margin-left: 5px;
+  background: #f6f9f7;
+  border: 2px solid #225560;
+}
+
 
 div.bidinfo {
   display: block;
@@ -133,7 +140,17 @@ div.bidslist {
 
 div.middlesection {
   display: block;
-  min-height: 230px;
+  min-height: 80px;
+  .timer {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    background: #225560;
+    margin: 6px auto 20px auto;
+    width: 450px;
+    color: white;
+    padding: 11px;
+  }
 }
 
 #clockdiv{

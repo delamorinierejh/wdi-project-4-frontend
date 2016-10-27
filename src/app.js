@@ -2,7 +2,8 @@ angular
 .module("bidUpApp", [
   "ui.router",
   "ngResource",
-  "angular-jwt"
+  "angular-jwt",
+  "timer"
 ]);
 
 console.log("loaded!");

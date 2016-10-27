@@ -41,59 +41,65 @@
 
 
   <div class="middlesection">
-    <div>
+    <div ng-hide="auctions.hideTimer">
       <h2 class="clockheader" ng-hide="(main.user.id == auctions.auction.user.id)">This bid runs out in:</h2>
       <h2 class="clockheader" ng-show="(main.user.id == auctions.auction.user.id)">Your bid runs out in:</h2>
-
-      <div id="clockdiv">
-        <div>
-          <span class="days"></span>
-          <div class="smalltext">Days</div>
-        </div>
-        <div>
-          <span class="hours"></span>
-          <div class="smalltext">Hours</div>
-        </div>
-        <div>
-          <span class="minutes"></span>
-          <div class="smalltext">Minutes</div>
-        </div>
-        <div>
-          <span class="seconds"></span>
-          <div class="smalltext">Seconds</div>
-        </div>
-      </div>
+      <timer class="timer" end-time="auctions.timerDate" interval="1000" finish-callback="auctions.timerDone()">{{days}} days | {{hours}} hours | {{minutes}} minutes | {{seconds}} seconds</timer>
     </div>
-
-
-    <div class="bidslist">
-      <h2>Bids</h2>
-      <ul ng-show="auctions.highBid">
-        <li ng-repeat="bid in auctions.auction.bids">
-          <ul class="eachbid">
-            <li>£{{bid.amount}}0</li>
-            <li>{{bid.user.first_name}} {{bid.user.last_name}}</li>
-            <li>{{bid.user.full_name}}</li>
-          </ul>
-        </li>
-      </ul>
-      <h3 ng-hide="auctions.highBid">No bids on this lot yet!</h3>
-
-      <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id !== auctions.highBid.user.id))">
-        <h2>Place a bid!</h2>
-        <form class="" ng-submit="auctions.placeBid()">
-          <div class="form-group">
-            £<input ng-model="auctions.bid.amount" type="number" min="{{auctions.bidMinimum}}" step="1.00" max="2500"/>
-          </div>
-          <input class="bidbutton" type="submit" value="Bid!">
-        </form>
-      </div>
-
-      <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id === auctions.highBid.user.id))" ng-show="auctions.highBid">
-        <h2>You currently have the highest bid!</h2>
-      </div>
+    <div ng-show="auctions.hideTimer">
+      <h2 class="clockheader">This lot has now expired!</h2>
     </div>
   </div>
+
+  <!-- <div id="clockdiv">
+  <div>
+  <span class="days"></span>
+  <div class="smalltext">Days</div>
+</div>
+<div>
+<span class="hours"></span>
+<div class="smalltext">Hours</div>
+</div>
+<div>
+<span class="minutes"></span>
+<div class="smalltext">Minutes</div>
+</div>
+<div>
+<span class="seconds"></span>
+<div class="smalltext">Seconds</div>
+</div>
+</div>
+</div> -->
+
+
+<div class="bidslist">
+  <h2>Bids</h2>
+  <ul ng-show="auctions.highBid">
+    <li ng-repeat="bid in auctions.auction.bids">
+      <ul class="eachbid">
+        <li>£{{bid.amount}}0</li>
+        <li>{{bid.user.first_name}} {{bid.user.last_name}}</li>
+        <li>{{bid.user.full_name}}</li>
+      </ul>
+    </li>
+  </ul>
+  <h3 ng-hide="auctions.highBid">No bids on this lot yet!</h3>
+
+  <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id !== auctions.highBid.user.id))">
+    <h2>Place a bid!</h2>
+    <form class="" ng-submit="auctions.placeBid()">
+      <div class="form-group">
+        £<input id="bidbox" ng-model="auctions.bid.amount" type="number" min="{{auctions.bidMinimum}}" step="1.00" max="2500"/>
+      </div>
+      <input class="bidbutton" type="submit" value="Bid!">
+    </form>
+  </div>
+
+  <div ng-if="((main.user.id !== auctions.auction.user.id) && (main.user.id === auctions.highBid.user.id))" ng-show="auctions.highBid">
+    <h2>You currently have the highest bid!</h2>
+  </div>
+</div>
+</div>
 
 
 
