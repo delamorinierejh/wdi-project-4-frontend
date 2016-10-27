@@ -21,13 +21,16 @@ ul.sortbuttons {
       border: 2px solid #225560;
       text-decoration: none !important;
       color: #225560;
-      &:hover, &:focus {
+      &:hover {
         cursor: pointer;
         background: #225560;
         color: white;
         transition: 0.4s all;
       }
-
+      &:active {
+        background: #225560;
+        color: white;
+      }
     }
   }
 }
