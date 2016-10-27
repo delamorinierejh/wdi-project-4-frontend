@@ -10,6 +10,7 @@ function AuctionsIndexCtrl(Auction, CurrentUserService){
   .$promise
   .then(data => {
     vm.auctions = data;
+    vm.auctions.reverse();
   });
   function newIndex(){
     $("#auctionslist").hide().fadeIn(400);
