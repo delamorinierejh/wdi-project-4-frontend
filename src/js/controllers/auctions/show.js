@@ -8,6 +8,7 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
   Auction.get($stateParams, data => {
     window.scrollTo(0, 0);
     vm.auction = data;
+    vm.auction.high_bid_user_id = CurrentUserService.getUser().id;
     vm.auction.bids.sort(compare).reverse();
     vm.user = CurrentUserService.getUser();
     vm.bid = {
@@ -28,7 +29,7 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
     }).then(response => {
       vm.charity = response.data.charitySearchResults[0];
     });
-    vm.deadline = new Date(Date.parse(vm.auction.end_date));
+    // vm.deadline = new Date(Date.parse(vm.auction.end_date));
     // initializeClock('clockdiv', vm.deadline);
   });
 
@@ -51,6 +52,11 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
         auction_id : vm.auction.id
       };
       vm.highBid = data;
+      Auction
+      .update($stateParams, { auction: vm.auction })
+      .$promise
+      .then(data => {
+      });
     });
   };
 
@@ -100,7 +106,6 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
   }
 
   vm.timerDone = () => {
-    console.log("true");
     vm.hideTimer = true;
   };
 }

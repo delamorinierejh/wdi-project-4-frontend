@@ -94,6 +94,14 @@ and (max-device-width : 667px) {
     }
   }
 
+  div.bidslist {
+    li {
+      ul.eachbid {
+        margin: 10px 0;
+      }
+    }
+  }
+
   .navbar .navbar-collapse {
     text-align: center;
   }

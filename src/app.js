@@ -5,5 +5,3 @@ angular
   "angular-jwt",
   "timer"
 ]);
-
-console.log("loaded!");

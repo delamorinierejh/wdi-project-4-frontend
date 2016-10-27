@@ -16,7 +16,6 @@ function AuctionsNewCtrl(Auction, $state, CurrentUserService, $http){
   };
   vm.searchCharities = searchCharities;
   function searchCharities(){
-    console.log("clicked");
     if (vm.charitySearch) {
       $http({
         method: 'GET',
@@ -28,7 +27,6 @@ function AuctionsNewCtrl(Auction, $state, CurrentUserService, $http){
   }
   vm.restartSearch = restartSearch;
   function restartSearch(){
-    console.log("clicked");
     vm.charitiesList = null;
     vm.charitySearch = null;
     vm.auction.charity = null;

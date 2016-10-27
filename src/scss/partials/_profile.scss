@@ -13,7 +13,7 @@ div.profilepage {
         color: white;
         margin: 10px 10px;
         height: 60px;
-        background: #8dba9a;
+        background: #70A8b5;
         // border-radius: 20px;
         border: 1px solid black;
         p {
@@ -24,8 +24,8 @@ div.profilepage {
           margin-left: 10px;
         }
         div.img {
-          width: 80px;
-          height: 60px;
+          width: 75px;
+          height: 58px;
           float: right;
           margin-top: 0;
           background-size: cover;
@@ -34,8 +34,17 @@ div.profilepage {
           // border-radius: 0 20px 20px 0;
         }
       }
-      li.bidsdata {
+      li.winning {
         background: #548c64;
+      }
+      li.losing {
+        background: #c16868;
+      }
+      li.finished {
+        background: #c16868;
+      }
+      li.success {
+        background: #225560;
       }
     }
     ul {

@@ -47,7 +47,9 @@
       <timer class="timer" end-time="auctions.timerDate" interval="1000" finish-callback="auctions.timerDone()">{{days}} days | {{hours}} hours | {{minutes}} minutes | {{seconds}} seconds</timer>
     </div>
     <div ng-show="auctions.hideTimer">
-      <h2 class="clockheader expired">This lot has now expired!</h2>
+      <h2 class="expiredmessage clockheader" ng-hide="(auctions.auction.bids[0].user.id == main.user.id)" class="clockheader expired">This auction has now expired</h2>
+      <h2 ng-show="(auctions.auction.bids[0].user.id == main.user.id)" class="clockheader">Congratulations {{auctions.auction.bids[0].user.first_name}}!</h2>
+      <p class="winnerinfo" ng-show="(auctions.auction.bids[0].user.id == main.user.id)">Your bid won this auction. An email has been sent to {{auctions.auction.bids[0].user.email}} with details on how to collect the lot and pay {{auctions.charity.charityDisplayName}}</p>
     </div>
   </div>
 
@@ -74,7 +76,7 @@
 
 <div ng-hide="auctions.hideTimer" class="bidslist">
   <h2>Bids</h2>
-  <ul ng-show="auctions.highBid">
+  <ul class="bidsbelow" ng-show="auctions.highBid">
     <li ng-repeat="bid in auctions.auction.bids">
       <ul class="eachbid">
         <li>£{{bid.amount}}0</li>
