@@ -39,7 +39,7 @@ div.auctionsindex{
     list-style-type: none;
     li {
       margin: 10px 0;
-      padding:  10px 30px 0px 30px;
+      padding:  10px 60px 0px 60px;
       min-height: 180px;
       transition: 0.4s all;
       &:hover {
@@ -50,15 +50,16 @@ div.auctionsindex{
       }
       div.indeximage {
         height: 150px;
-        width: 16%;
-        float: right;
+        width: 25%;
+        float: left;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
       }
       div.text {
-        float: left;
-        width: 75%;
+        margin-left: 8px;
+        float: right;
+        width: 73%;
         h1 {
           font-weight: 600;
           font-size: 18px;
