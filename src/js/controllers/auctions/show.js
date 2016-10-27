@@ -6,7 +6,6 @@ AuctionsShowCtrl.$inject = ["Auction", "Bid", "CurrentUserService", "$stateParam
 function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state, $http){
   const vm = this;
   Auction.get($stateParams, data => {
-    console.log(data);
     window.scrollTo(0, 0);
     vm.auction = data;
     vm.auction.bids.sort(compare).reverse();
@@ -47,7 +46,6 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
     .save({bid : vm.bid})
     .$promise
     .then(data => {
-      console.log(data);
       vm.auction.bids.unshift(data);
       vm.bid = {
         auction_id : vm.auction.id
@@ -102,6 +100,7 @@ function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state
   }
 
   vm.timerDone = () => {
+    console.log("true");
     vm.hideTimer = true;
   };
 }

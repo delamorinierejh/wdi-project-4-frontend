@@ -39,7 +39,7 @@ div.bidinfo {
     background-color: #225560;
     color: white;
     margin-bottom: 10px;
-    border-radius: 10px;
+    // border-radius: 10px;
     font-weight: 100;
   }
   img.mainimg {
@@ -98,6 +98,9 @@ div.column {
 h2.clockheader {
   text-align: center;
   padding: 10px;
+  &.expired {
+    margin-top: 20px;
+  }
 }
 
 div.bidslist {

@@ -8,6 +8,6 @@ function UsersShowCtrl(User, $stateParams, $state, $http){
   User.get($stateParams, data => {
     vm.user = data;
     vm.user.bids.reverse();
+      console.log(data);
   });
-
 }

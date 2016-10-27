@@ -1,6 +1,6 @@
 <h1 class="heading">{{users.user.full_name}}</h1>
-<div class="profilepage container">
-  <div class="col-md-3 profilecolumns one">
+<div class="profilepage">
+  <div class="profilecolumns">
     <img ng-src="{{users.user.profile_img}}" alt="{{users.user.full_name}}" />
   </div>
 
@@ -23,7 +23,22 @@
     <div class="profilecolumns three">
       <h2>Your bids</h2>
       <ul >
-        <li class="bidsdata" ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })">
+        <li class="bidsdata" ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })" ng-if="(bid.auction.status == 'live')">
+          <p>
+            {{bid.auction.title}} : £{{bid.amount}}0
+          </p>
+          <div style="background-image:url({{bid.auction.auction_img}})" class="img">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="profilecolumns three">
+      <h2>Successful lots</h2>
+      <ul >
+        <li class="bidsdata" ng-repeat="bid in users.user.bids" ui-sref="auctionsShow({ id: bid.auction.id })" ng-if="(bid.auction.status == 'finished')">
           <p>
             {{bid.auction.title}} : £{{bid.amount}}0
           </p>

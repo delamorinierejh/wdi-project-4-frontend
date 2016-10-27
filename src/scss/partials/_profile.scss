@@ -4,7 +4,7 @@ div.profilepage {
     color: black;
     text-align: center;
     min-height: 100px;
-    border-radius: 10px;
+    // border-radius: 10px;
     h2 {
       padding: 10px;
     }
@@ -14,7 +14,8 @@ div.profilepage {
         margin: 10px 10px;
         height: 60px;
         background: #8dba9a;
-        border-radius: 20px;
+        // border-radius: 20px;
+        border: 1px solid black;
         p {
           float: left;
           display: inline;
@@ -30,7 +31,7 @@ div.profilepage {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
-          border-radius: 0 20px 20px 0;
+          // border-radius: 0 20px 20px 0;
         }
       }
       li.bidsdata {
@@ -45,9 +46,8 @@ div.profilepage {
     img {
       width: 100%;
       border: 2px ridge #225560;
-      border-radius: 50px;
+      // border-radius: 50px;
       max-width: 250px;
-      margin-top: 50px;
     }
   }
   ul {
