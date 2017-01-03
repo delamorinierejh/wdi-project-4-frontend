@@ -26,7 +26,7 @@ Bid can be placed as long as the following criteria are met:
 #####Profile
 The profile page is a central hub from which the user can have an iverview of thier activity on the site: 
 
-1. Auctions they have posted (green if the auction is live, red otherwise), 
+1. Auctions they have posted (blue if the auction is live, red otherwise), 
 2. Live auctions that they are involved in (green if they have the highest bid, red otherwise)
 3. Expired auctions which they have won
 
