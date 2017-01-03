@@ -23,7 +23,7 @@ Bid can be placed as long as the following criteria are met:
 3. The bidder is not the owner of the auction
 4. The auction is still live
 
-#####Profile
+#####Profile:
 The profile page is a central hub from which the user can have an overview of thier activity on the site: 
 
 1. Auctions they have posted (blue if the auction is live, red otherwise), 
