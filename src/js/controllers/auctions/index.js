@@ -12,6 +12,7 @@ function AuctionsIndexCtrl(Auction, CurrentUserService){
   .then(data => {
     vm.auctions = data;
     vm.auctions.reverse();
+    console.log(vm.auctions);
   });
 
   function newIndex(){

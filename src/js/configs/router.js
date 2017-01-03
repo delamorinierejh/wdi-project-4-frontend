@@ -47,11 +47,11 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider){
     templateUrl: '/js/views/auctions/index.html',
     controller: 'AuctionsIndexCtrl as auctions'
   })
-  // .state('auctionsNew', {
-  //   url: '/auctions/new',
-  //   templateUrl: '/js/views/auctions/new.html',
-  //   controller: 'AuctionsNewCtrl as auctions'
-  // })
+  .state('auctionsNew', {
+    url: '/auctions/new',
+    templateUrl: '/js/views/auctions/new.html',
+    controller: 'AuctionsNewCtrl as auctions'
+  })
   .state("auctionsEdit", {
     url: "/auctions/:id/edit",
     templateUrl: "/js/views/auctions/edit.html",
