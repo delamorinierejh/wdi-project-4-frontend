@@ -5,6 +5,7 @@ angular
 AuctionsShowCtrl.$inject = ["Auction", "Bid", "CurrentUserService", "$stateParams", "$state", "$http"];
 function AuctionsShowCtrl(Auction, Bid, CurrentUserService, $stateParams, $state, $http){
   const vm = this;
+  
   Auction.get($stateParams, data => {
     window.scrollTo(0, 0);
     vm.auction = data;

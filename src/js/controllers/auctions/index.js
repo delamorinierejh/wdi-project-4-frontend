@@ -5,6 +5,7 @@ angular
 AuctionsIndexCtrl.$inject = ["Auction", "CurrentUserService"];
 function AuctionsIndexCtrl(Auction, CurrentUserService){
   const vm = this;
+
   Auction
   .query()
   .$promise
@@ -12,6 +13,7 @@ function AuctionsIndexCtrl(Auction, CurrentUserService){
     vm.auctions = data;
     vm.auctions.reverse();
   });
+
   function newIndex(){
     $("#auctionslist").hide().fadeIn(400);
   }

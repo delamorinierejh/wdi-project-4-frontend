@@ -1,3 +1,3 @@
 angular
   .module("bidUpApp")
-  .constant("API", `https://bidup-backend.herokuapp.com/api`); 
+  .constant("API", `http://localhost:3000/api`); 
