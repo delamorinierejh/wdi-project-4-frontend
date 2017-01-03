@@ -13,7 +13,7 @@ The site was built using a PostgreSQL database on a Ruby on the Rails Backend, w
 
 ###To view the app
 
-![alt text](http://imgur.com/ynAhlfD.png "Auction Page")
+![alt text](http://imgur.com/TsVy2lZ.png "Auction Page")
 
 Though there is a version of the site on Heroku, it would cost a little too much for me to update the database as frequently as I’d like. So - in order to view the app, please do the following:
 
