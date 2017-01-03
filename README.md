@@ -11,6 +11,25 @@ My final project at WDI. BidUp is a charity auction site which allows individual
 ![alt text](http://imgur.com/HjuMTDk.png "Profile Page")
 The site was built using a PostgreSQL database on a Ruby on the Rails Backend, with Angular on the Frontend and Bootstrap for CSS. The site is fully mobile responsive. I used the Whenever Gem to schedule regular checks of the database and update the statuses of the auctions on a minute by minute basis. I also integrated the JustGiving API to provide rich data on charities and make the UX for setting up a lot far more seamless.  This was my first project using Rails, having stuck to the MEAN stack in previous projects. Using this new framework was a hugely enjoyable and educational process. Though I still do like the MEAN stack a lot, having got a decent understanding of associations, the speed  and legibility of Rails means I’ll definitely be looking to use it in future projects.
 
+###Selected features of the site
+#####Creating auctions:
+Any user can post a lot, with details reuqired including an image, description and a reserve. The user also can search for the name of their preferred charity in the relevant input - this does an AJAX request to the Just Giving API, returning the top 5 matches for the serach terms. Once the user has chosen their charity from this list, the JustGiving Data is stored in an object as a prpoerty of the auction.
+
+#####Bidding:
+Bid can be placed as long as the following criteria are met:
+
+1. The bid is higher than the current highest bid or the reserve
+2. The bidder does not already have the highest bid
+3. The bidder is not the owner of the auction
+4. The auction is still live
+
+#####Profile
+The profile page is a central hub from which the user can have an iverview of thier activity on the site: 
+
+1. Auctions they have posted (green if the auction is live, red otherwise), 
+2. Live auctions that they are involved in (green if they have the highest bid, red otherwise)
+3. Expired auctions which they have won
+
 ###To view the app
 
 ![alt text](http://imgur.com/TsVy2lZ.png "Auction Page")
