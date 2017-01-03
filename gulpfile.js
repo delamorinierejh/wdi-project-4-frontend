@@ -125,8 +125,8 @@ return gulp.src(`${src}/**/*.html`)
 // clean public
 gulp.task('clean:public', () => {
   return del([
-    'public/**/*',
-  ]);
+    'public/*'
+  ], {dot: true});
 });
 
 gulp.task('html', () => {

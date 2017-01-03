@@ -42,8 +42,8 @@
 
   <div class="middlesection">
     <div ng-hide="auctions.hideTimer">
-      <h2 class="clockheader" ng-hide="(main.user.id == auctions.auction.user.id)">This bid runs out in:</h2>
-      <h2 class="clockheader" ng-show="(main.user.id == auctions.auction.user.id)">Your bid runs out in:</h2>
+      <h2 class="clockheader" ng-hide="(main.user.id == auctions.auction.user.id)">This auctions runs out in:</h2>
+      <h2 class="clockheader" ng-show="(main.user.id == auctions.auction.user.id)">Your auction runs out in:</h2>
       <timer class="timer" end-time="auctions.timerDate" interval="1000" finish-callback="auctions.timerDone()">{{days}} days | {{hours}} hours | {{minutes}} minutes | {{seconds}} seconds</timer>
     </div>
     <div ng-show="auctions.hideTimer">
