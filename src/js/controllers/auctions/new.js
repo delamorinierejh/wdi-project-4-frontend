@@ -16,6 +16,9 @@ function AuctionsNewCtrl(Auction, $state, CurrentUserService, $http, AuctionUplo
     //   $state.go("auctionsIndex");
     // });
     AuctionUpload.createWithAttachment(vm.auction);
+    setTimeout(() => {
+      $state.go('auctionsIndex');
+    }, 1000);
   };
   vm.searchCharities = searchCharities;
   function searchCharities(){
