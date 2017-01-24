@@ -10,6 +10,7 @@ function AuctionsIndexCtrl(Auction, CurrentUserService){
   .query()
   .$promise
   .then(data => {
+    console.log(data);
     vm.auctions = data;
     vm.auctions.reverse();
   });

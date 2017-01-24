@@ -5,7 +5,8 @@
     <div class="topbidbit" ng-cloak>
       <div class="column col-md-4">
         <h3>The Lot</h3>
-        <img class="mainimg" ng-src="{{ auctions.auction.auction_img }}">
+        <img ng-if="!auctions.auction.upload_img.url" class="mainimg" ng-src="{{ auctions.auction.auction_img }}">
+        <img ng-if="auctions.auction.upload_img.url" class="mainimg" ng-src="{{ auctions.auction.upload_img.url }}">
         <ul>
           <li><p ng-cloak>{{auctions.auction.description}}</p></li>
         </ul>

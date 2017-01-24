@@ -12,8 +12,8 @@
           <p>
             {{auction.title}}
           </p>
-          <div style="background-image:url({{auction.auction_img}})" class="img">
-          </div>
+          <div ng-if="!auction.upload_img.url" class="img" style="background-image:url({{auction.auction_img}}) "></div>
+          <div ng-if="auction.upload_img" class="img" ngf-background="auction.upload_img.url"></div>
         </li>
       </ul>
     </div>

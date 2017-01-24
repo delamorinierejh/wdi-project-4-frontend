@@ -19,9 +19,8 @@
           Reserve: £{{auction.reserve}}0
         </p>
       </div>
-      <div class="indeximage" style="background-image:url({{auction.auction_img}}) ">
-
-      </div>
+      <div ng-if="!auction.upload_img.url" class="indeximage" style="background-image:url({{auction.auction_img}}) "></div>
+      <div ng-if="auction.upload_img" class="indeximage" ngf-background="auction.upload_img.url"></div>
     </li>
   </ul>
 </div>

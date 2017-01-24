@@ -1,6 +1,6 @@
 <h1 class="heading">Add a lot</h1>
 <div class="container">
-  <form class="addalot" ng-submit="auctions.submit()">
+  <form role="form" name="resourceForm" class="addalot" ng-submit="auctions.submit()">
     <div class="form-group">
       <label>Title</label>
       <input ng-model="auctions.auction.title" class="form-control">
@@ -9,9 +9,13 @@
       <label>Description</label>
       <textarea ng-model="auctions.auction.description" class="form-control"></textarea>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label>Image</label><br>
       <input ng-model="auctions.auction.auction_img" class="form-control">
+    </div> -->
+    <div class="form-group">
+      <label>Image</label>
+      <input type="file" ngf-select ng-model="auctions.auction.upload_img" />
     </div>
     <div ng-hide="auctions.charitiesList" class="charityselector">
       <label for="">Charity</label><br>
